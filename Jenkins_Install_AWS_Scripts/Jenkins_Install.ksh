@@ -5,7 +5,7 @@
 #   https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
 #   /var/lib/jenkins/secrets/initialAdminPassword
 #   /tmp/jenkins_install_${PID}.txt - Logs
-#   Authour : Krishna Kumar M
+#   Authour : Krishna Kumar M - https://github.com/krishnakumarkrish
 #   version : 1.1
 
 #-----------------------------------

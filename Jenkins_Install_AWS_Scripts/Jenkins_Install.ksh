@@ -1,4 +1,5 @@
 #!/bin/bash
+#!/usr/bin/ksh
 
 #-----------------------------------
 # Jenkins on AWS
@@ -67,3 +68,4 @@ sudo systemctl status jenkins | tee -a $tmp_jenkins_install
 echo "**********************************************************************"  | tee -a $tmp_jenkins_install
 echo "Completed"  | tee -a $tmp_jenkins_install
 echo "**********************************************************************"  | tee -a $tmp_jenkins_install
+

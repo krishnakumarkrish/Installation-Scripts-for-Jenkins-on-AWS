@@ -31,12 +31,11 @@ echo "**********************************************************************"  |
 sudo yum install git -y 
 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install 
-echo "Docker - Install, Start, Added to ec2-user"  | tee -a $tmp_jenkins_docker_git_java_install 
+echo "Docker - Install, Added to ec2-user, Start"  | tee -a $tmp_jenkins_docker_git_java_install 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install 
-sudo yum install docker
-sudo systemctl start docker 
+sudo yum install docker 
 sudo gpasswd -a ec2-user docker 
-
+sudo systemctl start docker
 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install
 echo "Add the Jenkins repo"  | tee -a $tmp_jenkins_docker_git_java_install

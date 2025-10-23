@@ -28,14 +28,14 @@ sudo yum update -y | tee -a $tmp_jenkins_docker_git_java_install
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install 
 echo "Git - Install"  | tee -a $tmp_jenkins_docker_git_java_install 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install 
-sudo yum install git -y 
+sudo yum install git -y | tee -a $tmp_jenkins_docker_git_java_install
 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install 
 echo "Docker - Install, Added to ec2-user, Start"  | tee -a $tmp_jenkins_docker_git_java_install 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install 
-sudo yum install docker 
-sudo gpasswd -a ec2-user docker 
-sudo systemctl start docker
+sudo yum install docker | tee -a $tmp_jenkins_docker_git_java_install
+sudo gpasswd -a ec2-user docker | tee -a $tmp_jenkins_docker_git_java_install
+sudo systemctl start docker | tee -a $tmp_jenkins_docker_git_java_install
 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install
 echo "Add the Jenkins repo"  | tee -a $tmp_jenkins_docker_git_java_install
@@ -80,5 +80,7 @@ echo "**********************************************************************"  |
 echo "Completed"  | tee -a $tmp_jenkins_docker_git_java_install
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install
 
+echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install
 echo "Please Reboot the Server"  | tee -a $tmp_jenkins_docker_git_java_install
 # sudo reboot | tee -a $tmp_jenkins_docker_git_java_install
+echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install

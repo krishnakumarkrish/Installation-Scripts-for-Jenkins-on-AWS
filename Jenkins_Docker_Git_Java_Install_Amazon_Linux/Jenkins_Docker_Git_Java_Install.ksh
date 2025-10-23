@@ -80,5 +80,5 @@ echo "**********************************************************************"  |
 echo "Completed"  | tee -a $tmp_jenkins_docker_git_java_install
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install
 
-
-sudo reboot | tee -a $tmp_jenkins_docker_git_java_install
+echo "Please Reboot the Server"  | tee -a $tmp_jenkins_docker_git_java_install
+# sudo reboot | tee -a $tmp_jenkins_docker_git_java_install

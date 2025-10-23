@@ -34,8 +34,9 @@ echo "**********************************************************************"  |
 echo "Docker - Install, Added to ec2-user, Start"  | tee -a $tmp_jenkins_docker_git_java_install 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install 
 sudo yum install docker | tee -a $tmp_jenkins_docker_git_java_install
-sudo gpasswd -a ec2-user docker | tee -a $tmp_jenkins_docker_git_java_install
+sudo systemctl status docker | tee -a $tmp_jenkins_docker_git_java_install
 sudo systemctl start docker | tee -a $tmp_jenkins_docker_git_java_install
+sudo gpasswd -a ec2-user docker | tee -a $tmp_jenkins_docker_git_java_install
 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install
 echo "Add the Jenkins repo"  | tee -a $tmp_jenkins_docker_git_java_install

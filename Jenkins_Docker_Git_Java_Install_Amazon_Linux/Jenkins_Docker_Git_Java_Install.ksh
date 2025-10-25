@@ -31,11 +31,19 @@ echo "**********************************************************************"  |
 sudo yum install git -y | tee -a $tmp_jenkins_docker_git_java_install
 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install 
-echo "Docker - Install, Added to ec2-user, Start"  | tee -a $tmp_jenkins_docker_git_java_install 
+echo "Docker - Install"  | tee -a $tmp_jenkins_docker_git_java_install 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install 
-sudo yum install docker | tee -a $tmp_jenkins_docker_git_java_install
+sudo yum install docker -y | tee -a $tmp_jenkins_docker_git_java_install
+
+echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install 
+echo "Docker - Start , Status"  | tee -a $tmp_jenkins_docker_git_java_install 
+echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install 
 sudo systemctl start docker | tee -a $tmp_jenkins_docker_git_java_install
 sudo systemctl status docker | tee -a $tmp_jenkins_docker_git_java_install
+
+echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install 
+echo "Docker - Added to ec2-user"  | tee -a $tmp_jenkins_docker_git_java_install 
+echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install 
 sudo gpasswd -a ec2-user docker | tee -a $tmp_jenkins_docker_git_java_install
 
 echo "**********************************************************************"  | tee -a $tmp_jenkins_docker_git_java_install

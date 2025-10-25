@@ -6,7 +6,7 @@
 # Jenkins_Install_Amazon_Linux.ksh
 # https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
 # /var/lib/jenkins/secrets/initialAdminPassword
-# /tmp/jenkins_install_${PID}.txt - Logs
+# /tmp/jenkins_install_logs_${PID}.txt - Logs
 # Author: Krishna Kumar M - https://github.com/krishnakumarkrish
 # Version: 1.1
 #-----------------------------------
@@ -16,10 +16,10 @@ set -e  # Exit immediately if any command fails
 PID=$$
 
 # Remove previous logs if they exist
-rm -f /tmp/jenkins_install_*
+rm -f /tmp/jenkins_install_logs_*
 
 # Create a new log file
-tmp_jenkins_install="/tmp/jenkins_install_${PID}.txt"
+tmp_jenkins_install="/tmp/jenkins_install_logs_${PID}.txt"
 
 cd /opt
 
